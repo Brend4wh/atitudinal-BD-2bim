@@ -1,0 +1,16 @@
+questao 1)
+
+SELECT nota_prova_bimestral
+FROM materias_alunos
+WHERE nota_prova_bimestral > 7;
+
+questao 2)
+
+SELECT * FROM materias_alunos
+WHERE ((0.2 * nota_atitudinal) + (0.3 * nota_prova_mensal) + (0.5 * nota_prova_bimestral)/3) > 7.0;
+
+questao 3)
+
+SELECT * FROM alunos WHERE nota_prova_bimestral > 7.0 AND id_aluno IN ( SELECT id_aluno
+FROM cursos WHERE curso = 'Técnico em Game') AND ((0.1 * nota_atitudinal) + (0.3 * nota_mensal) +
+(0.5 * nota_prova_bimestral)) > 7.0;
